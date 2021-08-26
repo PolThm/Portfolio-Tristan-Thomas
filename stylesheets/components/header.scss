@@ -61,7 +61,7 @@ nav {
       color: $white;
       font-weight: 500;
       @include font-size($text-xs);
-      transition: color $time1 $easing;
+      transition: color $time2 $easing;
     }
 
     @include on-event{
