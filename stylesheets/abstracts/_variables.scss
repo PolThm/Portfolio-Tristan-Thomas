@@ -12,8 +12,6 @@ $dark: hsl(0, 0%, 14%);
 $grey-light: hsl(0, 0%, 80%);
 $grey-dark: hsl(0, 0%, 47%);
 $mauve: hsl(234, 100%, 76%);
-//$mauve: #EE0507;
-
 
 /// Breakpoints map
 $tablet: 576 !default;
@@ -74,7 +72,7 @@ $easing: ease-out !default;
 
 
 /// Box shadow
-$box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !default;
+$box-shadow: hsla(240, 5%, 41%, 0.2) 0 7px 29px 0 !default;
 
 
 /// Relative or absolute URL where all assets are served from
