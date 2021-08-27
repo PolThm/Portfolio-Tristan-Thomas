@@ -1,59 +1,57 @@
 .portfolio {
-
-}
-
-h2 {
-  height: 140px;
-  @include flex-center-vert;
-}
-
-.projects {
-  min-height: calc(100vh - #{$height-section-title} * 1.7);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $mp-2xl;
-  margin-bottom: $mp-2xl;
-}
-
-.project {
-  @include flex-center-vert;
-  @include box(100%);
-  cursor: pointer;
-
-  &--left {
-    justify-content: flex-end;
+  h2 {
+    height: 140px;
+    @include flex-center-vert;
   }
 
-  img {
-    @include box(100%);
-    max-width: 350px;
-    object-fit: cover;
+  .projects {
+    min-height: calc(100vh - #{$height-section-title} * 1.7);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $mp-2xl;
+    margin-bottom: $mp-2xl;
+  }
 
-    @include on-event{
-      opacity: 0.5;
+  .project {
+    @include flex-center-vert;
+    @include box(100%);
+    cursor: pointer;
+
+    &--left {
+      justify-content: flex-end;
+    }
+
+    img {
+      @include box(100%);
+      max-width: 350px;
+      object-fit: cover;
+
+      @include on-event {
+        opacity: 0.5;
+      }
     }
   }
-}
 
-@include breakpoint($tablet) {
+  @include breakpoint($tablet) {
 
-}
-
-@include breakpoint($desktop) {
-  .projects {
-    grid-template-columns: 1fr 1fr;
-    gap: unset;
   }
 
-  .project-container:nth-child(odd) {
-    margin-right: 2rem;
-  }
+  @include breakpoint($desktop) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+      gap: unset;
+    }
 
-  .project-container:nth-child(even) {
-    margin-left: 2rem;
-  }
+    .project-container:nth-child(odd) {
+      margin-right: 2rem;
+    }
 
-  .project img {
-    @include box(75%);
+    .project-container:nth-child(even) {
+      margin-left: 2rem;
+    }
+
+    .project img {
+      @include box(75%);
+    }
   }
 }

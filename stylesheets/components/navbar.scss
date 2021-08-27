@@ -6,111 +6,110 @@ $logo-size: 30px;
   @include flex-center-vert;
   background: $white;
   color: $dark;
-}
 
-nav {
-  @include flex-center-vert;
-  justify-content: space-between;
-}
-
-.logo {
-  @include flex-center-vert;
-
-  img {
-    @include box($logo-size);
-    transition: all $time1 $easing;
-
-    @include on-event {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.menu {
-  margin: 0;
-  background: $dark;
-  position: absolute;
-  left: -100%;
-  top: $navbar-height;
-  width: 50%;
-  height: calc(100% - #{$navbar-height});
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  transition: left $time3 $easing;
-
-  &--active {
-    left: 0;
+  nav {
+    @include flex-center-vert;
+    justify-content: space-between;
   }
 
-  &__link {
-    @include flex-center;
-    height: 100%;
-    cursor: pointer;
-    transition: background $time2 $easing;
+  .logo {
+    @include flex-center-vert;
 
-    a {
-      color: $white;
-      font-weight: 500;
-      @include font-size($text-xs);
-      transition: color $time2 $easing, border $time2 $easing;
-    }
-
-    @include on-event{
-      background: $white;
-
-      a {
-        color: $mauve;
-        border-color: $mauve;
-      }
-    }
-  }
-
-  &__resume a {
-    border: 1px solid $white;
-    border-radius: $br-full-px;
-    padding: 0 $mp-sm;
-  }
-}
-
-.burger {
-  @include font-size($text-lg);
-  cursor: pointer;
-  transition: color $time1 $easing;
-
-  @include on-event {
-    color: $mauve;
-  }
-}
-
-@include breakpoint($tablet) {
-  .menu {
-    min-width: 30%;
-    align-items: center;
-    width: initial;
-    position: initial;
-    height: initial;
-    background: initial;
-    flex-direction: initial;
-
-    &__link {
-      margin-left: 2rem;
-
-      a {
-        color: $dark;
-        border-color: $dark;
-        transition: color $time1 $easing, border $time1 $easing;
-      }
+    img {
+      @include box($logo-size);
+      transition: all $time1 $easing;
 
       @include on-event {
-        background: inherit;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .menu {
+    margin: 0;
+    background: $dark;
+    position: absolute;
+    left: -100%;
+    top: $navbar-height;
+    width: 50%;
+    height: calc(100% - #{$navbar-height});
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: left $time3 $easing;
+
+    &--active {
+      left: 0;
+    }
+
+    &__link {
+      @include flex-center;
+      height: 100%;
+      cursor: pointer;
+      transition: background $time2 $easing;
+
+      a {
+        color: $white;
+        font-weight: 500;
+        @include font-size($text-xs);
+        transition: color $time2 $easing, border $time2 $easing;
+      }
+
+      @include on-event{
+        background: $white;
+
+        a {
+          color: $mauve;
+          border-color: $mauve;
+        }
       }
     }
 
-
+    &__resume a {
+      border: 1px solid $white;
+      border-radius: $br-full-px;
+      padding: 0 $mp-sm;
+    }
   }
 
   .burger {
-    display: none;
+    @include font-size($text-lg);
+    cursor: pointer;
+    transition: color $time1 $easing;
+
+    @include on-event {
+      color: $mauve;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    .menu {
+      min-width: 30%;
+      align-items: center;
+      width: initial;
+      position: initial;
+      height: initial;
+      background: initial;
+      flex-direction: initial;
+
+      &__link {
+        margin-left: 2rem;
+
+        a {
+          color: $dark;
+          border-color: $dark;
+          transition: color $time1 $easing, border $time1 $easing;
+        }
+
+        @include on-event {
+          background: inherit;
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+    }
   }
 }
+

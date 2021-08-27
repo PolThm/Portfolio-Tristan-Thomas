@@ -3,40 +3,41 @@
 header {
   min-height: 100vh;
   background: $light;
+
+  .hero {
+    min-height: calc(100vh - #{$navbar-height});
+    @include flex-center-column;
+    text-align: center;
+
+    img {
+      max-width: 180px;
+      border-radius: $br-full;
+      margin-top: -2rem;
+      margin-bottom: 2rem;
+      box-shadow: $box-shadow;
+    }
+
+    h2 {
+      @include font-size($text-xl);
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 1rem;
+      color: $grey-dark;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    .hero img {
+      max-width: 210px;
+    }
+  }
+
+  @include breakpoint($desktop) {
+    .hero img {
+      max-width: 240px;
+    }
+  }
 }
 
-.hero {
-  min-height: calc(100vh - #{$navbar-height});
-  @include flex-center-column;
-  text-align: center;
-
-  img {
-    max-width: 180px;
-    border-radius: $br-full;
-    margin-top: -2rem;
-    margin-bottom: 2rem;
-    box-shadow: $box-shadow;
-  }
-
-  h2 {
-    @include font-size($text-xl);
-    font-weight: 400;
-  }
-
-  p {
-    margin-top: 1rem;
-    color: $grey-dark;
-  }
-}
-
-@include breakpoint($tablet) {
-  .hero img {
-    max-width: 210px;
-  }
-}
-
-@include breakpoint($desktop) {
-  .hero img {
-    max-width: 240px;
-  }
-}
