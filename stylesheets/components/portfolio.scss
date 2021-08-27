@@ -17,7 +17,7 @@
     @include box(100%);
     cursor: pointer;
 
-    &--left {
+    &--odd {
       justify-content: flex-end;
     }
 
