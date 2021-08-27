@@ -18,6 +18,11 @@ header {
     box-shadow: $box-shadow;
   }
 
+  h2 {
+    @include font-size($text-xl);
+    font-weight: 400;
+  }
+
   p {
     margin-top: 1rem;
     color: $grey-dark;

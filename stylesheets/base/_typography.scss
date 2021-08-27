@@ -14,8 +14,8 @@ h1 {
 }
 
 h2 {
-  @include font-size($text-xl);
-  font-weight: 400;
+  @include font-size($text-3xl);
+  font-weight: 300;
 }
 
 h3 {
