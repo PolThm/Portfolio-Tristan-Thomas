@@ -1,4 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: $width-content-container;
   margin: auto;
+}
+
+section {
+  min-height: 100vh;
 }
