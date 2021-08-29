@@ -17,7 +17,7 @@ $logo-size: 30px;
 
     img {
       @include box($logo-size);
-      transition: all $time1 $easing;
+      transition: all $time2 $easing;
 
       @include on-event {
         transform: scale(1.1);
