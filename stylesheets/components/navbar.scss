@@ -59,16 +59,19 @@ $logo-size: 30px;
         background: $white;
 
         a {
-          color: $mauve;
-          border-color: $mauve;
+          color: $primary;
+          border-color: $primary;
+        }
+
+        .btn--outline {
+          background: $primary;
+          color: $white;
         }
       }
     }
 
-    &__resume a {
-      border: 1px solid $white;
-      border-radius: $br-full-px;
-      padding: 0 $mp-sm;
+    .btn {
+      margin-top: initial;
     }
   }
 
@@ -78,7 +81,7 @@ $logo-size: 30px;
     transition: color $time1 $easing;
 
     @include on-event {
-      color: $mauve;
+      color: $primary;
     }
   }
 

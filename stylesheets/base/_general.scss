@@ -10,3 +10,51 @@ html {
 section {
   min-height: 100vh;
 }
+
+.btn {
+  margin-top: $mp-lg;
+  background: $primary;
+  color: $white;
+  font-weight: 500;
+  padding: $mp-sm $mp-lg;
+  border: 1px solid $primary;
+  border-radius: $br-sm;
+  transition: color $time2 $easing, background $time2 $easing, box-shadow $time2 $easing;
+
+
+  @include on-event {
+    background: transparent;
+    color: $primary;
+  }
+
+  &--outline {
+    background: transparent;
+    color: $primary;
+
+    @include on-event {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  &--circle {
+    border-radius: $br-full-px;
+  }
+
+  &--small {
+    padding: 0 $mp-sm;
+    @include font-size($text-xs);
+  }
+
+  &--gradient {
+    @include on-event($self: true) {
+      background: linear-gradient(36deg, $gradient-start 0%, $gradient-end 100%);
+      border-color: transparent;
+      color: white;
+    }
+
+    @include on-event() {
+      box-shadow: 0 10px 20px 0 $primary;
+    }
+  }
+}

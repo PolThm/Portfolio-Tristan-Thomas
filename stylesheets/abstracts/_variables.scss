@@ -12,7 +12,9 @@ $light: hsl(240, 100%, 99%);
 $dark: hsl(0, 0%, 14%);
 $grey-light: hsl(0, 0%, 80%);
 $grey-dark: hsl(0, 0%, 47%);
-$mauve: hsl(234, 100%, 76%);
+$primary: hsl(358, 80%, 50%);
+$gradient-start: hsl(0, 100%, 49%);
+$gradient-end: hsl(358, 99%, 37%);
 
 /// Breakpoints map
 $tablet: 576 !default;
