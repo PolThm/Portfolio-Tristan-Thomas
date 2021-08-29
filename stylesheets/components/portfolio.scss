@@ -13,21 +13,38 @@
   }
 
   .project {
+    position: relative;
     @include flex-center-vert;
     @include box(100%);
+    background: red;
     cursor: pointer;
-
-    &--odd {
-      justify-content: flex-end;
-    }
 
     img {
       @include box(100%);
-      max-width: 350px;
+      max-height: 234px;
       object-fit: cover;
+      transition: all $time2 $easing;
+    }
 
-      @include on-event {
+    &__content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      @include fade('hide');
+
+      h4 {
+        color: $white;
+      }
+    }
+
+    @include on-event {
+      img {
         opacity: 0.5;
+      }
+
+      .project__content {
+        @include fade('show');
       }
     }
   }
@@ -39,19 +56,18 @@
   @include breakpoint($desktop) {
     .projects {
       grid-template-columns: 1fr 1fr;
-      gap: unset;
     }
+  }
 
-    .project-container:nth-child(odd) {
-      margin-right: 2rem;
+  @include breakpoint($lg-desktop) {
+    .projects {
+      padding: 0 $mp-xl;
     }
+  }
 
-    .project-container:nth-child(even) {
-      margin-left: 2rem;
-    }
-
-    .project img {
-      @include box(75%);
+  @include breakpoint($xl-desktop) {
+    .projects {
+      padding: 0 $mp-3xl;
     }
   }
 }

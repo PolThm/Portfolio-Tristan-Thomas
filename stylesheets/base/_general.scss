@@ -15,6 +15,7 @@ section {
   margin-top: $mp-lg;
   background: $primary;
   color: $white;
+  @include font-size($text-sm);
   font-weight: 500;
   padding: $mp-sm $mp-lg;
   border: 1px solid $primary;

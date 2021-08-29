@@ -23,7 +23,8 @@ h3 {
 }
 
 h4 {
-
+  @include font-size($text-xl);
+  font-weight: 500;
 }
 
 h5 {
