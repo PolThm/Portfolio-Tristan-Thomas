@@ -19,7 +19,6 @@
     @include flex-center-vert;
     @include box(100%);
     background: $primary;
-    max-height: 234px;
     cursor: pointer;
 
     img {
@@ -54,6 +53,10 @@
   @include breakpoint($desktop) {
     .projects {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .project {
+      height: max(235px, 100%);
     }
   }
 
