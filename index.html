@@ -22,7 +22,9 @@
           <li class="menu__link"><a href="#">ABOUT</a></li>
           <li class="menu__link"><a href="#">CONTACT</a></li>
           <li class="menu__link menu__resume">
-            <button class="btn btn--outline btn--circle btn--small">RESUME</button>
+            <button class="btn btn--outline btn--circle btn--small" onclick="openPdf('https://www.docdroid.net/i0xz3I7/fake-cv-pdf')">
+              RESUME
+            </button>
           </li>
         </ul>
         <div class="burger">
@@ -34,11 +36,13 @@
       <img src="images/profile-picture.jpg" alt="profile picture">
       <h1>Tristan Thomas</h1>
       <h2>Data analyst</h2>
-      <button class="btn btn--gradient">MY PROJECTS</button>
+      <button class="btn btn--gradient" onclick="goToAnchor('portfolio')">
+        MY PROJECTS
+      </button>
     </div>
   </header>
 
-  <section class="portfolio content-container">
+  <section id="portfolio" class="content-container">
     <h2>Portfolio</h2>
     <div class="projects">
       <div class="project" onclick="openPdf('https://jeune-naturopathie.fr/wp-content/uploads/2019/11/FORMATION_FFJR.pdf')">

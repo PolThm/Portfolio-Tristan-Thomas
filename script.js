@@ -10,3 +10,8 @@ const toggleNav = () => {
 const openPdf = (pdf) => {
     window.open(pdf);
 }
+
+const goToAnchor = (anchor) => {
+    const loc = document.location.toString().split('#')[0];
+    document.location = loc + '#' + anchor;
+}
