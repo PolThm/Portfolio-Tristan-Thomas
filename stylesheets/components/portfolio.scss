@@ -1,4 +1,6 @@
 .portfolio {
+  scroll-snap-align: start;
+
   h2 {
     height: 140px;
     @include flex-center-vert;
