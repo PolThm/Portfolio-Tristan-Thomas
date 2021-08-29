@@ -169,10 +169,10 @@ $z-index-level: very-low, low, middle, high, very-high;
   @if $type== "hide" {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s, opacity 1s;
+    transition: visibility $time3 $easing, opacity $time3 $easing;
   } @else if $type== "show" {
     visibility: visible;
     opacity: 1;
-    transition: visibility 1s, opacity 1s;
+    transition: visibility $time3 $easing, opacity $time3 $easing;
   }
 }
