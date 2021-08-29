@@ -18,12 +18,12 @@
     position: relative;
     @include flex-center-vert;
     @include box(100%);
-    background: red;
+    background: $primary;
+    max-height: 234px;
     cursor: pointer;
 
     img {
       @include box(100%);
-      max-height: 234px;
       object-fit: cover;
       transition: all $time2 $easing;
     }
@@ -49,10 +49,6 @@
         @include fade('show');
       }
     }
-  }
-
-  @include breakpoint($tablet) {
-
   }
 
   @include breakpoint($desktop) {
