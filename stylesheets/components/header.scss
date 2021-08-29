@@ -21,14 +21,9 @@ header {
       box-shadow: $box-shadow;
     }
 
-    h1 {
-      animation: fadeIn 2s $easing;
-    }
-
     h2 {
       @include font-size($text-xl);
       font-weight: 400;
-      animation: fadeIn 5s $easing;
     }
 
     .btn {
