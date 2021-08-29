@@ -54,21 +54,11 @@
     .projects {
       grid-template-columns: 1fr 1fr;
     }
-
-    .project {
-      height: max(235px, 100%);
-    }
   }
 
   @include breakpoint($lg-desktop) {
     .projects {
-      padding: 0 $mp-xl;
-    }
-  }
-
-  @include breakpoint($xl-desktop) {
-    .projects {
-      padding: 0 $mp-3xl;
+      padding: 0 10vw;
     }
   }
 }
