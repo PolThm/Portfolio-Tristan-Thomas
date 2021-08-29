@@ -16,7 +16,7 @@ $logo-size: 30px;
     @include flex-center-vert;
 
     img {
-      @include box($logo-size);
+      width: 80px;
       transition: all $time2 $easing;
 
       @include on-event {

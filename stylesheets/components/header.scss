@@ -1,12 +1,14 @@
 @import "navbar";
 
+$vh-header: 85vh;
+
 header {
   scroll-snap-align: start;
-  min-height: 100vh;
+  min-height: $vh-header;
   background: $light;
 
   .hero {
-    min-height: calc(100vh - #{$navbar-height});
+    min-height: calc(#{$vh-header} - #{$navbar-height});
     @include flex-center-column;
     text-align: center;
 
