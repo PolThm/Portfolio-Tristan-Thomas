@@ -37,6 +37,7 @@ $logo-size: 30px;
     flex-direction: column;
     justify-content: space-around;
     transition: left $time3 $easing;
+    @include z-index(high);
 
     &--active {
       left: 0;
