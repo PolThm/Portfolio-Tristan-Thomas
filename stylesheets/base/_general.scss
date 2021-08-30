@@ -55,8 +55,10 @@ section {
       color: white;
     }
 
-    @include on-event() {
-      box-shadow: 0 10px 20px 0 $primary;
+    @include breakpoint($desktop) {
+      @include on-event {
+        box-shadow: 0 10px 20px 0 $primary;
+      }
     }
   }
 }
