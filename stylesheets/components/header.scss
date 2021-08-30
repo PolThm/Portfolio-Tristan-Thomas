@@ -19,18 +19,12 @@ header {
       margin-top: -$mp-xl;
       margin-bottom: $mp-base;
       box-shadow: $box-shadow;
-      animation: widen 2s;
     }
 
     h2 {
       @include font-size($text-xl);
       font-weight: 400;
     }
-
-    //.btn {
-    //  position: relative;
-    //  animation: fadeInUp 2s $easing;
-    //}
   }
 
   @include breakpoint($tablet) {
