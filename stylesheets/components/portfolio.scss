@@ -16,10 +16,20 @@
 
   .project {
     position: relative;
-    @include flex-center-vert;
     @include box(100%);
+    @include flex-center-vert;
     background: $primary;
-    cursor: pointer;
+
+    &__content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @include fade('hide');
+
+      h4 {
+        color: $white;
+      }
+    }
 
     img {
       @include box(100%);
@@ -27,17 +37,44 @@
       transition: all $time2 $easing;
     }
 
-    &__content {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      @include fade('hide');
+    h4 {
+      text-align: center;
+    }
 
-      h4 {
-        color: $white;
+    .project__cta {
+      @include flex-center-column;
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        color: $primary;
+        background: $white;
+        border-color: $white;
+        margin-top: $mp-base;
+
+        @include on-event {
+          color: $white;
+          background: transparent;
+        }
+
+        &--outline {
+          color: $white;
+          border-color: $white;
+          background: transparent;
+
+          @include on-event {
+            color: $primary;
+            background: $white;
+          }
+        }
+
+        i {
+          margin-left: $mp-xs;
+        }
       }
     }
+
+
 
     @include on-event {
       img {
@@ -47,6 +84,12 @@
       .project__content {
         @include fade('show');
       }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    .project .btn {
+      margin-top: $mp-lg !important;
     }
   }
 
