@@ -18,7 +18,7 @@
     position: relative;
     @include box(100%);
     @include flex-center-vert;
-    background: $primary;
+    background: $dark;
 
     &__content {
       position: absolute;
@@ -47,7 +47,7 @@
       .btn {
         width: 100%;
         text-align: center;
-        color: $primary;
+        color: $dark;
         background: $white;
         border-color: $white;
         margin-top: $mp-base;
@@ -63,7 +63,7 @@
           background: transparent;
 
           @include on-event {
-            color: $primary;
+            color: $dark;
             background: $white;
           }
         }
@@ -78,7 +78,7 @@
 
     @include on-event {
       img {
-        opacity: 0.5;
+        opacity: 0.3;
       }
 
       .project__content {

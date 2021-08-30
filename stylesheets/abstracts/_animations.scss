@@ -17,3 +17,12 @@
     top: 0;
   }
 }
+
+@keyframes widen {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}

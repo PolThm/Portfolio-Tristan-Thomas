@@ -14,11 +14,12 @@ header {
     padding: $mp-2xl 0 $mp-xl 0;
 
     img {
-      max-width: 180px;
+      max-width: 210px;
       border-radius: $br-full;
       margin-top: -$mp-xl;
       margin-bottom: $mp-base;
       box-shadow: $box-shadow;
+      animation: widen 2s;
     }
 
     h2 {
@@ -26,21 +27,21 @@ header {
       font-weight: 400;
     }
 
-    .btn {
-      position: relative;
-      animation: fadeInUp 2s $easing;
-    }
+    //.btn {
+    //  position: relative;
+    //  animation: fadeInUp 2s $easing;
+    //}
   }
 
   @include breakpoint($tablet) {
     .hero img {
-      max-width: 210px;
+      max-width: 260px;
     }
   }
 
   @include breakpoint($desktop) {
     .hero img {
-      max-width: 240px;
+      max-width: 300px;
     }
   }
 }
