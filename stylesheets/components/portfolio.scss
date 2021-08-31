@@ -3,9 +3,9 @@
   margin-bottom: 4rem;
 
   h2 {
-    padding: $mp-xl 0;
+    padding-top: $mp-xl;
+    margin-bottom: $mp-xl;
     @include flex-center-vert;
-    color: $primary;
   }
 
   .projects {
