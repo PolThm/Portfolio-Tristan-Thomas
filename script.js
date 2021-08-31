@@ -1,4 +1,5 @@
 const burger = document.querySelector('.burger i');
+// const burgerClose = document.querySelector('.fa-times');
 const menu = document.querySelector('.menu');
 const navbar = document.querySelector('.navbar-container');
 
@@ -14,6 +15,9 @@ const openPdf = (pdf) => {
 
 const goToAnchor = (anchor) => {
     menu.classList.remove('menu--active');
+    burger.classList.toggle('fa-bars');
+    burger.classList.toggle('fa-times');
+
     const loc = document.location.toString().split('#')[0];
     document.location = loc + '#' + anchor;
 }

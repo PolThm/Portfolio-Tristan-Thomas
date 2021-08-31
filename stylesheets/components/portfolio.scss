@@ -19,6 +19,7 @@
     @include box(100%);
     @include flex-center-vert;
     background: $dark;
+    box-shadow: $box-shadow;
 
     &__content {
       position: absolute;

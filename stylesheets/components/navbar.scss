@@ -9,20 +9,20 @@ $logo-width: 60px;
   position: fixed;
   width: 100%;
   @include z-index(high);
-  transition: height $time2 $easing;
+  transition: height $time2 $easing, box-shadow $time2 $easing;
 
   &--on-scroll {
-    box-shadow: $box-shadow;
-    height: $navbar-height !important;
-
-    .logo img {
-      width: $logo-width !important;
-    }
-
-    .menu {
-      height: calc(100% - #{$navbar-height}) !important;
-      top: $navbar-height !important;
-    }
+    box-shadow: rgb(99 99 110 / 20%) 0 1px 14px 0;
+    //height: $navbar-height !important;
+    //
+    //.logo img {
+    //  width: $logo-width !important;
+    //}
+    //
+    //.menu {
+    //  height: calc(100% - #{$navbar-height}) !important;
+    //  top: $navbar-height !important;
+    //}
   }
 
   nav {
