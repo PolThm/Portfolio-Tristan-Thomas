@@ -4,8 +4,16 @@ html {
 }
 
 .content-container {
-  width: $width-content-container;
   margin: auto;
+  width: $width-content-container-mobile;
+
+  @include breakpoint($tablet) {
+    width: $width-content-container-tablet;
+  }
+
+  @include breakpoint($desktop) {
+    width: $width-content-container-desktop;
+  }
 }
 
 section {
