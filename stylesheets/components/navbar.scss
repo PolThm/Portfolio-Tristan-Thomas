@@ -37,10 +37,6 @@ $logo-width: 60px;
       font-weight: 600;
       transition: all $time1 $easing;
 
-      span {
-        color: $primary;
-      }
-
       @include on-event {
         transform: scale(1.025);
       }
