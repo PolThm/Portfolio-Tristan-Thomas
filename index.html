@@ -14,14 +14,20 @@
   <header>
     <div class="navbar-container">
       <nav class="content-container">
-        <a class="logo" href="#">
+        <a class="logo" href="#" onclick="goToAnchor('')">
           <img src="images/tt-logo2.png" alt="logo">
         </a>
         <ul class="menu">
-          <li class="menu__link"><a href="#portfolio">PORTFOLIO</a></li>
-          <li class="menu__link"><a href="#">ABOUT</a></li>
-          <li class="menu__link"><a href="#">CONTACT</a></li>
-          <li class="menu__link menu__resume">
+          <li class="menu__link" onclick="goToAnchor('portfolio')">
+            <a href="#portfolio">PORTFOLIO</a>
+          </li>
+          <li class="menu__link" onclick="goToAnchor('about')">
+            <a href="#">ABOUT</a>
+          </li>
+          <li class="menu__link" onclick="goToAnchor('contact')">
+            <a href="#">CONTACT</a>
+          </li>
+          <li class="menu__link" onclick="goToAnchor('resume')">
             <button class="btn btn--outline btn--circle btn--small" onclick="openPdf('https://www.docdroid.net/i0xz3I7/fake-cv-pdf')">
               RESUME
             </button>

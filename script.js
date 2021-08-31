@@ -12,6 +12,7 @@ const openPdf = (pdf) => {
 }
 
 const goToAnchor = (anchor) => {
+    menu.classList.remove('menu--active');
     const loc = document.location.toString().split('#')[0];
     document.location = loc + '#' + anchor;
 }
