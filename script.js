@@ -1,5 +1,6 @@
 const burger = document.querySelector('.burger i');
 const menu = document.querySelector('.menu');
+const navbar = document.querySelector('.navbar-container');
 
 const toggleNav = () => {
     burger.classList.toggle('fa-bars');
@@ -16,3 +17,13 @@ const goToAnchor = (anchor) => {
     const loc = document.location.toString().split('#')[0];
     document.location = loc + '#' + anchor;
 }
+
+window.onscroll = () => {
+    "use strict";
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 20 ) {
+        navbar.classList.add('navbar-container--on-scroll');
+    }
+    else {
+        navbar.classList.remove('navbar-container--on-scroll');
+    }
+};

@@ -1,11 +1,29 @@
-$navbar-height: 70px;
-$logo-size: 30px;
+$navbar-height: 45px;
+$logo-width: 60px;
 
 .navbar-container {
   height: $navbar-height;
   @include flex-center-vert;
   background: $white;
   color: $dark;
+  position: fixed;
+  width: 100%;
+  @include z-index(high);
+  transition: height $time2 $easing;
+
+  &--on-scroll {
+    box-shadow: $box-shadow;
+    height: $navbar-height !important;
+
+    .logo img {
+      width: $logo-width !important;
+    }
+
+    .menu {
+      height: calc(100% - #{$navbar-height}) !important;
+      top: $navbar-height !important;
+    }
+  }
 
   nav {
     @include flex-center-vert;
@@ -16,7 +34,7 @@ $logo-size: 30px;
     @include flex-center-vert;
 
     img {
-      width: 80px;
+      width: 60px;
       transition: all $time2 $easing;
 
       @include on-event {
@@ -28,7 +46,7 @@ $logo-size: 30px;
   .menu {
     margin: 0;
     background: $dark;
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: $navbar-height;
     width: 50%;
@@ -87,12 +105,22 @@ $logo-size: 30px;
   }
 
   @include breakpoint($tablet) {
+    $navbar-height: 70px;
+    $logo-width: 80px;
+
+    height: $navbar-height;
+
+    .logo img {
+      width: $logo-width;
+    }
+
     .menu {
       min-width: 30%;
+      top: $navbar-height;
+      height: calc(100% - #{$navbar-height});
       align-items: center;
       width: initial;
       position: initial;
-      height: initial;
       background: initial;
       flex-direction: initial;
 

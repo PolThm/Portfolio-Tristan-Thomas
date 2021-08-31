@@ -11,7 +11,7 @@ header {
     min-height: calc(#{$vh-header} - #{$navbar-height});
     @include flex-center-column;
     text-align: center;
-    padding: $mp-2xl 0 $mp-xl 0;
+    padding: calc(#{$navbar-height} + #{$mp-2xl}) 0 $mp-xl 0;
 
     img {
       max-width: 210px;
