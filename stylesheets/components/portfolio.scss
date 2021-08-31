@@ -1,9 +1,11 @@
 #portfolio {
-  scroll-snap-align: start;
+  scroll-margin-top: 2rem;
+  margin-bottom: 4rem;
 
   h2 {
-    height: 140px;
+    padding: $mp-xl 0;
     @include flex-center-vert;
+    color: $primary;
   }
 
   .projects {
@@ -94,6 +96,8 @@
   }
 
   @include breakpoint($tablet) {
+    scroll-margin-top: 4rem;
+
     .project .btn {
       margin-top: $mp-lg !important;
     }

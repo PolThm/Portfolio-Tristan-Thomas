@@ -13,16 +13,6 @@ $logo-width: 60px;
 
   &--on-scroll {
     box-shadow: rgb(99 99 110 / 20%) 0 1px 14px 0;
-    //height: $navbar-height !important;
-    //
-    //.logo img {
-    //  width: $logo-width !important;
-    //}
-    //
-    //.menu {
-    //  height: calc(100% - #{$navbar-height}) !important;
-    //  top: $navbar-height !important;
-    //}
   }
 
   nav {
@@ -33,12 +23,26 @@ $logo-width: 60px;
   .logo {
     @include flex-center-vert;
 
-    img {
-      width: 60px;
-      transition: all $time2 $easing;
+    //img {
+    //  width: 60px;
+    //  transition: all $time2 $easing;
+    //
+    //  @include on-event {
+    //    transform: scale(1.1);
+    //  }
+    //}
+
+    h3 {
+      @include font-size($text-2xl);
+      font-weight: 600;
+      transition: all $time1 $easing;
+
+      span {
+        color: $primary;
+      }
 
       @include on-event {
-        transform: scale(1.1);
+        transform: scale(1.025);
       }
     }
   }

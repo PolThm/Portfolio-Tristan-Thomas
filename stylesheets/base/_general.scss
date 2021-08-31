@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  //scroll-snap-type: y proximity;
 }
 
 .content-container {
@@ -17,7 +16,7 @@ html {
 }
 
 section {
-  min-height: 100vh;
+  //min-height: 100vh;
 }
 
 .btn {

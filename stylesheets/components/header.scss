@@ -3,7 +3,6 @@
 $vh-header: 75vh;
 
 header {
-  scroll-snap-align: start;
   min-height: $vh-header;
   background: $light;
 
@@ -16,7 +15,7 @@ header {
     img {
       max-width: 210px;
       border-radius: $br-full;
-      margin-top: -$mp-xl;
+      margin-top: -$mp-base;
       margin-bottom: $mp-base;
       box-shadow: $box-shadow;
     }
@@ -30,6 +29,7 @@ header {
   @include breakpoint($tablet) {
     .hero img {
       max-width: 260px;
+      margin-top: initial;
     }
   }
 
