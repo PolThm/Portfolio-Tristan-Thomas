@@ -5,6 +5,7 @@ footer {
 
   p, .date {
     color: $white;
+    @include font-size($text-sm);
 
     .name {
       font-weight: 400;
