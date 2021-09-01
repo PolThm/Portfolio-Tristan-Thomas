@@ -1,7 +1,4 @@
 #portfolio {
-  scroll-margin-top: 2rem;
-  margin-bottom: 4rem;
-
   h2 {
     padding-top: $mp-xl;
     margin-bottom: $mp-xl;
@@ -93,8 +90,6 @@
   }
 
   @include breakpoint($tablet) {
-    scroll-margin-top: 4rem;
-
     .project .btn {
       margin-top: $mp-lg !important;
     }

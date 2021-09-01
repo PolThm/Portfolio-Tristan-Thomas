@@ -5,18 +5,12 @@ html {
 .content-container {
   margin: auto;
   width: $width-content-container-mobile;
-
-  @include breakpoint($tablet) {
-    width: $width-content-container-tablet;
-  }
-
-  @include breakpoint($desktop) {
-    width: $width-content-container-desktop;
-  }
 }
 
 section {
-  //min-height: 100vh;
+  $navbar-height: 45px;
+  min-height: calc(100vh - #{$navbar-height});
+  scroll-margin-top: $navbar-height;
 }
 
 .btn {
@@ -61,11 +55,37 @@ section {
       border-color: transparent;
       color: white;
     }
+  }
+}
 
-    @include breakpoint($desktop) {
-      @include on-event {
-        box-shadow: 0 10px 20px 0 $primary;
-      }
+@include breakpoint($tablet) {
+  .content-container {
+    width: $width-content-container-tablet;
+  }
+
+  section {
+    $navbar-height: 70px;
+    min-height: calc(100vh - #{$navbar-height});
+    scroll-margin-top: $navbar-height;
+  }
+}
+
+@include breakpoint($desktop) {
+  .content-container {
+    width: $width-content-container-desktop;
+  }
+
+  .btn--gradient {
+    @include on-event {
+      box-shadow: 0 10px 20px 0 $primary;
     }
   }
+}
+
+@include breakpoint($lg-desktop) {
+
+}
+
+@include breakpoint($xl-desktop) {
+
 }
