@@ -23,6 +23,9 @@ header {
     h2 {
       @include font-size($text-xl);
       font-weight: 400;
+      padding-top: initial;
+      margin-bottom: initial;
+      font-style: initial;
     }
   }
 

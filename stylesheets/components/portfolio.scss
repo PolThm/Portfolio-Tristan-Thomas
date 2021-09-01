@@ -1,17 +1,16 @@
 #portfolio {
   h2 {
-    padding-top: $mp-xl;
-    margin-bottom: $mp-xl;
-    @include flex-center-vert;
-    font-style: italic;
+    //padding-top: $mp-xl;
+    //margin-bottom: $mp-xl;
+    //font-style: italic;
   }
 
   .projects {
-    min-height: calc(100vh - #{$height-section-title} * 1.7);
+    min-height: calc(100vh - 15rem);
     display: grid;
     grid-template-columns: 1fr;
     gap: $mp-2xl;
-    margin-bottom: $mp-2xl;
+    margin-bottom: 4rem;
   }
 
   .project {

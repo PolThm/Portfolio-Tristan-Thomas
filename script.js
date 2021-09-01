@@ -1,6 +1,8 @@
 const burger = document.querySelector('.burger i');
 const menu = document.querySelector('.menu');
 const navbar = document.querySelector('.navbar-container');
+const date = document.querySelector('.date');
+const year = new Date().getFullYear()
 
 const toggleNav = () => {
     burger.classList.toggle('fa-bars');
@@ -36,3 +38,5 @@ window.onscroll = () => {
         navbar.classList.remove('navbar-container--on-scroll');
     }
 };
+
+date.innerHTML = year;

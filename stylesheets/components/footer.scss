@@ -1,0 +1,13 @@
+footer {
+  height: $footer-height;
+  background: $dark;
+  @include flex-center;
+
+  p, .date {
+    color: $white;
+
+    .name {
+      font-weight: 400;
+    }
+  }
+}
