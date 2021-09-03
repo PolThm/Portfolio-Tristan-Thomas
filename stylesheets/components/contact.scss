@@ -35,7 +35,6 @@
       display: flex;
 
       i {
-        color: $dark;
         transition: color $time1 $easing;
 
         @include on-event {
