@@ -13,7 +13,7 @@ html {
 
 section {
   $navbar-height: 45px;
-  min-height: calc(100vh - #{$navbar-height});
+  //min-height: calc(100vh - #{$navbar-height});
   scroll-margin-top: $navbar-height;
 }
 
@@ -69,7 +69,7 @@ section {
 
   section {
     $navbar-height: 70px;
-    min-height: calc(100vh - #{$navbar-height});
+    //min-height: calc(100vh - #{$navbar-height});
     scroll-margin-top: $navbar-height;
   }
 }

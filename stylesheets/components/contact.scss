@@ -4,4 +4,54 @@
   h2 {
     text-align: right;
   }
+
+  .contact {
+    &__content {
+      margin: 0 auto 8rem auto;
+      padding-left: $mp-xl;
+      border-left: 3px solid $primary;
+      @include flex-column;
+      gap: $mp-base;
+
+      p {
+        font-weight: 400;
+      }
+
+      span {
+        color: initial;
+      }
+
+      a {
+        transition: color $time1 $easing;
+        text-decoration: underline;
+
+        @include on-event {
+          color: $primary;
+        }
+      }
+    }
+
+    &__links {
+      display: flex;
+
+      i {
+        color: $dark;
+        transition: color $time1 $easing;
+
+        @include on-event {
+          color: $primary;
+        }
+      }
+
+      &--github {
+        margin-left: $mp-lg;
+      }
+    }
+
+    @include breakpoint($lg-desktop) {
+      &__content {
+        width: $width-container-tight;
+      }
+    }
+  }
 }
