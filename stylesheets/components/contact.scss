@@ -2,12 +2,12 @@
   margin-bottom: -$footer-height;
 
   h2 {
-    text-align: right;
+    text-align: center;
   }
 
   .contact {
     &__content {
-      margin: 0 auto 8rem auto;
+      margin: 0 auto 6rem auto;
       padding-left: $mp-xl;
       border-left: 3px solid $primary;
       @include flex-column;
