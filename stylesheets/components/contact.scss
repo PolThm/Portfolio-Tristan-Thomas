@@ -1,3 +1,7 @@
 #contact {
-margin-bottom: -$footer-height;
+  margin-bottom: -$footer-height;
+
+  h2 {
+    text-align: right;
+  }
 }

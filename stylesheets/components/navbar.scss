@@ -1,4 +1,5 @@
 $navbar-height: 45px;
+//$navbar-width-desktop: 75vw;
 $logo-width: 60px;
 
 .navbar-container {
@@ -35,11 +36,11 @@ $logo-width: 60px;
     h3 {
       @include font-size($text-2xl);
       font-weight: 600;
-      transition: all $time1 $easing;
-
-      @include on-event {
-        transform: scale(1.025);
-      }
+      //transition: all $time1 $easing;
+      //
+      //@include on-event {
+      //  transform: scale(1.025);
+      //}
     }
   }
 
@@ -143,5 +144,11 @@ $logo-width: 60px;
       display: none;
     }
   }
+
+  //@include breakpoint($desktop) {
+  //  nav {
+  //    width: $navbar-width-desktop;
+  //  }
+  //}
 }
 

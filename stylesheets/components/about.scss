@@ -1,7 +1,36 @@
 #about {
   background: $light;
+  @include flex-center;
+  min-height: initial;
+
+  .content-container {
+    @include flex-column;
+    gap: $mp-lg;
+  }
 
   h2 {
-    text-align: right;
+    text-align: center;
+    margin-bottom: initial;
+  }
+
+  p {
+    //@include font-size($text-sm);
+  }
+
+  .separator {
+    width: 6rem;
+    margin: auto;
+    border-bottom: 3px solid $primary;
+  }
+
+  .post-scriptum {
+    text-align: center;
+    margin-bottom: $mp-2xl;
+  }
+
+  @include breakpoint($lg-desktop) {
+    .content-container {
+      width: $width-container-tight;
+    }
   }
 }

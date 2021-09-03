@@ -1,16 +1,10 @@
 #portfolio {
-  h2 {
-    //padding-top: $mp-xl;
-    //margin-bottom: $mp-xl;
-    //font-style: italic;
-  }
-
   .projects {
-    min-height: calc(100vh - 15rem);
+    min-height: calc(100vh - 14.5rem);
     display: grid;
     grid-template-columns: 1fr;
     gap: $mp-2xl;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem auto;
   }
 
   .project {
@@ -102,7 +96,7 @@
 
   @include breakpoint($lg-desktop) {
     .projects {
-      padding: 0 10vw;
+      width: $width-container-tight;
     }
   }
 }
