@@ -15,24 +15,20 @@
     position: relative;
     @include box(100%);
     @include flex-center-column;
+    background: $dark;
+    box-shadow: $box-shadow;
 
     img {
       @include box(100%);
       object-fit: cover;
-      background: $dark;
-      box-shadow: $box-shadow;
-      //border: 3px solid $primary;
-
       transition: all $time2 $easing;
     }
 
     h4 {
-      text-align: center;
-      margin-bottom: -$mp-lg;
-      padding-top: 0.5rem;
+
       @include font-size($text-base);
-      //font-style: italic;
-      //color: $grey-dark;
+      position: absolute;
+      bottom: -1.85rem;
     }
 
     &__content {
