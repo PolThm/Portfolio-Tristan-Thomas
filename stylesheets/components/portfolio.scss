@@ -14,20 +14,10 @@
   .project {
     position: relative;
     @include box(100%);
-    @include flex-center-vert;
+    @include flex-center-column;
     background: $dark;
     box-shadow: $box-shadow;
-
-    &__content {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      @include fade('hide');
-
-      h4 {
-        color: $white;
-      }
-    }
+    //border: 3px solid $primary;
 
     img {
       @include box(100%);
@@ -37,10 +27,26 @@
 
     h4 {
       text-align: center;
+      margin-bottom: -$mp-lg;
+      @include font-size($text-base);
+      //font-style: italic;
+      //color: $grey-dark;
+    }
+
+    &__content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @include fade('hide');
     }
 
     .project__cta {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       @include flex-center-column;
+      gap: $mp-base;
+      @include fade('hide');
 
       .btn {
         width: 100%;
@@ -48,7 +54,8 @@
         color: $dark;
         background: $white;
         border-color: $white;
-        margin-top: $mp-base;
+        //margin-top: $mp-base;
+        margin-top: initial;
 
         @include on-event {
           color: $white;
@@ -80,15 +87,15 @@
         opacity: 0.3;
       }
 
-      .project__content {
+      .project__cta {
         @include fade('show');
       }
     }
   }
 
   @include breakpoint($tablet) {
-    .project .btn {
-      margin-top: $mp-lg !important;
+    .project__cta {
+      gap: $mp-lg !important;
     }
   }
 
