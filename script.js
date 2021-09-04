@@ -2,7 +2,7 @@ const burger = document.querySelector('.burger i');
 const menu = document.querySelector('.menu');
 const navbar = document.querySelector('.navbar-container');
 const date = document.querySelector('.date');
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
 
 const toggleNav = () => {
     burger.classList.toggle('fa-bars');
@@ -14,19 +14,15 @@ const openPdf = (pdf) => {
     window.open(pdf);
 }
 
-const closeMobileMenu = () => {
-    menu.classList.remove('menu--active');
-}
-
 const goToAnchor = (anchor) => {
-    const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-    const loc = document.location.toString().split('#')[0];
-
-    if (windowWidth < 576) {
+    if (burger.classList.contains('fa-times')) {
         burger.classList.toggle('fa-bars');
         burger.classList.toggle('fa-times');
     }
-    closeMobileMenu()
+
+    menu.classList.remove('menu--active');
+
+    const loc = document.location.toString().split('#')[0];
     document.location = loc + '#' + anchor;
 }
 
