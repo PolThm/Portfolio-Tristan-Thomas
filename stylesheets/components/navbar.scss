@@ -125,7 +125,7 @@ $logo-width: 60px;
       flex-direction: initial;
 
       &__link {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
 
         a {
           color: $dark;
@@ -144,10 +144,14 @@ $logo-width: 60px;
     }
   }
 
-  //@include breakpoint($desktop) {
-  //  nav {
-  //    width: $width-container-tight;
-  //  }
-  //}
+  @include breakpoint($desktop) {
+    .menu__link {
+      margin-left: 2rem;
+    }
+
+    //nav {
+    //  width: $width-container-tight;
+    //}
+  }
 }
 

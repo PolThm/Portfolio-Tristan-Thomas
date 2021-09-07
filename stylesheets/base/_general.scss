@@ -15,6 +15,7 @@ section {
   $navbar-height: 45px;
   //min-height: calc(100vh - #{$navbar-height});
   scroll-margin-top: $navbar-height;
+  padding: $mp-base 0;
 }
 
 .btn {
@@ -25,7 +26,7 @@ section {
   font-weight: 500;
   padding: $mp-sm $mp-lg;
   border: 1px solid $primary;
-  border-radius: $br-sm;
+  border-radius: $br-full-px;
   transition: color $time2 $easing, background $time2 $easing, box-shadow $time2 $easing;
 
 
