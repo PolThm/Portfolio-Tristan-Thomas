@@ -52,7 +52,6 @@
         color: $dark;
         background: $white;
         border-color: $white;
-        //margin-top: $space-base;
         margin-top: initial;
 
         @include on-event {

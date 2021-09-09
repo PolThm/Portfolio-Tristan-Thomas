@@ -1,7 +1,6 @@
 #about {
   background: $light;
   @include flex-center;
-  //min-height: initial;
 
   .content-container {
     @include flex-column;

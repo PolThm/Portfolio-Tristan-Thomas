@@ -25,21 +25,11 @@ $logo-width: 60px;
 
     //img {
     //  width: 60px;
-    //  transition: all $time2 $easing;
-    //
-    //  @include on-event {
-    //    transform: scale(1.1);
-    //  }
     //}
 
     h3 {
       @include font-size($text-2xl);
       font-weight: 600;
-      //transition: all $time1 $easing;
-      //
-      //@include on-event {
-      //  transform: scale(1.025);
-      //}
     }
   }
 
@@ -148,10 +138,6 @@ $logo-width: 60px;
     .menu__link {
       margin-left: 2rem;
     }
-
-    //nav {
-    //  width: $width-container-tight;
-    //}
   }
 }
 
