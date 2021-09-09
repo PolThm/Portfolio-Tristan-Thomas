@@ -42,8 +42,7 @@ section {
   padding: $space-sm $space-lg;
   border: 1px solid $primary;
   border-radius: $br-full-px;
-  transition: color $time2 $easing, background $time2 $easing, box-shadow $time2 $easing;
-
+  @include transition(color border box-shadow);
 
   @include on-event {
     background: transparent;

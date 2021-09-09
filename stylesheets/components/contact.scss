@@ -19,7 +19,7 @@
     }
 
     a {
-      transition: color $time1 $easing;
+      @include transition(color, $time1);
       text-decoration: underline;
 
       @include on-event {
@@ -32,7 +32,7 @@
     display: flex;
 
     i {
-      transition: color $time1 $easing;
+      @include transition(color, $time1);
 
       @include on-event {
         color: $primary;

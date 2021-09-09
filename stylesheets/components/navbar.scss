@@ -16,7 +16,7 @@
   position: fixed;
   width: 100%;
   @include z-index(high);
-  transition: height $time2 $easing, box-shadow $time2 $easing;
+  @include transition(height box-shadow);
 
   &--on-scroll {
     box-shadow: rgb(99 99 110 / 20%) 0 1px 14px 0;
@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transition: left $time3 $easing;
+    @include transition(left, $time3);
     @include z-index(high);
 
     &--active {
@@ -62,13 +62,13 @@
       @include flex-center;
       height: 100%;
       cursor: pointer;
-      transition: background $time2 $easing;
+      @include transition(background);
 
       a {
         color: $white;
         font-weight: 500;
         @include font-size($text-xs);
-        transition: color $time2 $easing, border $time2 $easing;
+        @include transition(color border);
       }
 
       @include on-event{
@@ -94,7 +94,7 @@
   .burger {
     @include font-size($text-lg);
     cursor: pointer;
-    transition: color $time1 $easing;
+    @include transition(color, $time1);
 
     @include on-event {
       color: $primary;
@@ -116,7 +116,7 @@
         a {
           color: $dark;
           border-color: $dark;
-          transition: color $time1 $easing, border $time1 $easing;
+          @include transition(color border, $time1 $time1);
         }
 
         @include on-event {

@@ -21,21 +21,7 @@
     img {
       @include box(100%);
       object-fit: cover;
-      transition: all $time2 $easing;
-    }
-
-    h4 {
-
-      @include font-size($text-base);
-      position: absolute;
-      bottom: -1.85rem;
-    }
-
-    &__content {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      @include fade('hide');
+      @include transition(all);
     }
 
     .project__cta {
@@ -53,6 +39,7 @@
         background: $white;
         border-color: $white;
         margin-top: initial;
+        @include transition(all);
 
         @include on-event {
           color: $white;

@@ -132,8 +132,26 @@
   background-position: center;
 }
 
-@mixin transition() {
-  
+@mixin transition($prop, $time: $time2, $easing: $easing, $delay: 0s) {
+  $transition: ();
+  @for $i from 1 through length($prop) {
+    @for $j from 0 to (length($prop)) - (length($time)) {
+      $time: join($time, nth($time, -1));
+    }
+    @for $j from 0 to (length($prop)) - (length($easing)) {
+      $easing: join($easing, nth($easing, -1));
+    }
+    @for $j from 0 to (length($prop)) - (length($delay)) {
+      $delay: join($delay, nth($delay, -1));
+    }
+
+    $transition: append(
+            $transition,
+                (nth($prop, $i) nth($time, $i) nth($easing, $i) nth($delay, $i)),
+        $separator: comma
+    );
+  }
+  transition: $transition;
 }
 
 
@@ -170,13 +188,13 @@ $z-index-level: very-low, low, middle, high, very-high;
 
 /// Visibility
 @mixin fade($type) {
+  @include transition(visibility opacity, $time3);
+
   @if $type== "hide" {
     visibility: hidden;
     opacity: 0;
-    transition: visibility $time3 $easing, opacity $time3 $easing;
   } @else if $type== "show" {
     visibility: visible;
     opacity: 1;
-    transition: visibility $time3 $easing, opacity $time3 $easing;
   }
 }
