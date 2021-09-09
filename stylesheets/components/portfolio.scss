@@ -13,7 +13,7 @@
 
   .project {
     position: relative;
-    @include box(100%);
+    @include box(100.1%);
     @include flex-center-column;
     background: $dark;
     box-shadow: $box-shadow;
