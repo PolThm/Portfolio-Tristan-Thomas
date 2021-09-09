@@ -7,7 +7,7 @@
     min-height: calc(100vh - 16.5rem);
     display: grid;
     grid-template-columns: 1fr;
-    gap: $mp-2xl;
+    gap: $space-2xl;
     margin: 0 auto 4rem auto;
   }
 
@@ -43,7 +43,7 @@
       left: 50%;
       transform: translateX(-50%);
       @include flex-center-column;
-      gap: $mp-base;
+      gap: $space-base;
       @include fade('hide');
 
       .btn {
@@ -52,7 +52,7 @@
         color: $dark;
         background: $white;
         border-color: $white;
-        //margin-top: $mp-base;
+        //margin-top: $space-base;
         margin-top: initial;
 
         @include on-event {
@@ -72,7 +72,7 @@
         }
 
         i {
-          margin-left: $mp-xs;
+          margin-left: $space-xs;
           color: $primary;
         }
       }
@@ -93,7 +93,7 @@
 
   @include breakpoint($tablet) {
     .project__cta {
-      gap: $mp-lg !important;
+      gap: $space-lg !important;
     }
   }
 

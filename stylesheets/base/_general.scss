@@ -15,16 +15,16 @@ section {
   $navbar-height: 45px;
   //min-height: calc(100vh - #{$navbar-height});
   scroll-margin-top: $navbar-height;
-  padding: $mp-base 0;
+  padding: $space-base 0;
 }
 
 .btn {
-  margin-top: $mp-lg;
+  margin-top: $space-lg;
   background: $primary;
   color: $white;
   @include font-size($text-sm);
   font-weight: 500;
-  padding: $mp-sm $mp-lg;
+  padding: $space-sm $space-lg;
   border: 1px solid $primary;
   border-radius: $br-full-px;
   transition: color $time2 $easing, background $time2 $easing, box-shadow $time2 $easing;
@@ -50,7 +50,7 @@ section {
   }
 
   &--small {
-    padding: 0 $mp-sm;
+    padding: 0 $space-sm;
     @include font-size($text-xs);
   }
 

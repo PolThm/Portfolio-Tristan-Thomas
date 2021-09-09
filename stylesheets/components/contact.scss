@@ -8,10 +8,10 @@
   .contact {
     &__content {
       margin: 0 auto 6rem auto;
-      padding-left: $mp-xl;
+      padding-left: $space-xl;
       border-left: 3px solid $primary;
       @include flex-column;
-      gap: $mp-base;
+      gap: $space-base;
 
       p {
         font-weight: 400;
@@ -43,7 +43,7 @@
       }
 
       &--github {
-        margin-left: $mp-lg;
+        margin-left: $space-lg;
       }
     }
 

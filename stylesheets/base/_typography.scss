@@ -21,8 +21,8 @@ h1 {
 h2 {
   @include font-size($text-3xl);
   font-weight: 400;
-  padding-top: $mp-xl;
-  margin-bottom: $mp-xl;
+  padding-top: $space-xl;
+  margin-bottom: $space-xl;
 }
 
 h3 {

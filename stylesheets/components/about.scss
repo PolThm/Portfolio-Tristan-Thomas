@@ -5,7 +5,7 @@
 
   .content-container {
     @include flex-column;
-    gap: $mp-lg;
+    gap: $space-lg;
   }
 
   h2 {
@@ -21,7 +21,7 @@
 
   .post-scriptum {
     text-align: center;
-    margin-bottom: $mp-2xl;
+    margin-bottom: $space-2xl;
   }
 
   @include breakpoint($lg-desktop) {

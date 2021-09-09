@@ -10,13 +10,13 @@ header {
     min-height: calc(#{$vh-header} - #{$navbar-height});
     @include flex-center-column;
     text-align: center;
-    padding: calc(#{$navbar-height} + #{$mp-2xl}) 0 $mp-xl 0;
+    padding: calc(#{$navbar-height} + #{$space-2xl}) 0 $space-xl 0;
 
     img {
       max-width: 210px;
       border-radius: $br-full;
-      margin-top: -$mp-base;
-      margin-bottom: $mp-base;
+      margin-top: -$space-base;
+      margin-bottom: $space-base;
       box-shadow: $box-shadow;
     }
 
