@@ -22,7 +22,8 @@ h2 {
   @include font-size($text-3xl);
   font-weight: 400;
   padding-top: $space-xl;
-  margin-bottom: $space-xl;
+  margin: 0 auto $space-xl auto;
+
 }
 
 h3 {

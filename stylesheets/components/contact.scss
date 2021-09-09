@@ -1,6 +1,4 @@
 .contact {
-  margin-bottom: -$footer-height;
-
   h2 {
     text-align: center;
   }
@@ -43,12 +41,6 @@
 
     &--github {
       margin-left: $space-lg;
-    }
-  }
-
-  @include breakpoint($lg-desktop) {
-    &__content {
-      width: $container-tight-width;
     }
   }
 }

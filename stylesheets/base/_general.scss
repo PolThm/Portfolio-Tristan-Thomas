@@ -1,5 +1,4 @@
-$container-tight-width: 55vw;
-$footer-height: 40px;
+$container-tight: 55vw;
 
 :root {
   --navbar-height: 45px;
@@ -24,14 +23,14 @@ html {
   scroll-behavior: smooth;
 }
 
-.content-container {
-  width: var(--content-container-width);
-  margin: auto;
-}
-
 section {
   scroll-margin-top: var(--navbar-height);
   padding: $space-base 0;
+}
+
+.content-container {
+  width: var(--content-container-width);
+  margin: auto;
 }
 
 .btn {
@@ -84,5 +83,11 @@ section {
     @include on-event {
       box-shadow: 0 10px 20px 0 $primary;
     }
+  }
+}
+
+@include breakpoint($lg-desktop) {
+  section > * {
+    width: $container-tight !important;
   }
 }

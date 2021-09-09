@@ -99,10 +99,4 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-
-  @include breakpoint($lg-desktop) {
-    .projects {
-      width: $container-tight-width;
-    }
-  }
 }

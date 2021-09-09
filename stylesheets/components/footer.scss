@@ -1,4 +1,7 @@
+$footer-height: 40px;
+
 footer {
+  margin-top: -$footer-height;
   height: $footer-height;
   background: $dark;
   @include flex-center;

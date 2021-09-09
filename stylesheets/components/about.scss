@@ -22,10 +22,4 @@
     text-align: center;
     margin-bottom: $space-2xl;
   }
-
-  @include breakpoint($lg-desktop) {
-    .content-container {
-      width: $container-tight-width;
-    }
-  }
 }
