@@ -1,8 +1,15 @@
-$navbar-height: 45px;
-$logo-width: 60px;
+//:root {
+//  --logo-width: 60px;
+//}
+//
+//@include breakpoint($tablet) {
+//  :root {
+//    --logo-width: 80px;
+//  }
+//}
 
 .navbar-container {
-  height: $navbar-height;
+  height: var(--navbar-height);
   @include flex-center-vert;
   background: $white;
   color: $dark;
@@ -24,7 +31,7 @@ $logo-width: 60px;
     @include flex-center-vert;
 
     //img {
-    //  width: 60px;
+    //  width: var(--logo-width);
     //}
 
     h3 {
@@ -38,9 +45,9 @@ $logo-width: 60px;
     background: $dark;
     position: fixed;
     left: -100%;
-    top: $navbar-height;
+    top: var(--navbar-height);
     width: 50%;
-    height: calc(100% - #{$navbar-height});
+    height: calc(100% - #{var(--navbar-height)});
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -95,19 +102,8 @@ $logo-width: 60px;
   }
 
   @include breakpoint($tablet) {
-    $navbar-height: 70px;
-    $logo-width: 80px;
-
-    height: $navbar-height;
-
-    .logo img {
-      width: $logo-width;
-    }
-
     .menu {
       min-width: 30%;
-      top: $navbar-height;
-      height: calc(100% - #{$navbar-height});
       align-items: center;
       width: initial;
       position: initial;

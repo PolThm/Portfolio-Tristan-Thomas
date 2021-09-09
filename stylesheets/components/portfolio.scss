@@ -77,8 +77,6 @@
       }
     }
 
-
-
     @include on-event {
       img {
         opacity: 0.2;
@@ -104,7 +102,7 @@
 
   @include breakpoint($lg-desktop) {
     .projects {
-      width: $width-container-tight;
+      width: $container-tight-width;
     }
   }
 }

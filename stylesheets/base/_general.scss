@@ -1,19 +1,36 @@
+$container-tight-width: 55vw;
+$footer-height: 40px;
+
+:root {
+  --navbar-height: 45px;
+  --content-container-width: 85vw;
+}
+
+@include breakpoint($tablet) {
+  :root {
+    --navbar-height: 70px;
+    --content-container-width: 80vw;
+  }
+}
+
+@include breakpoint($desktop) {
+  :root {
+    --content-container-width: 75vw;
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
 
 .content-container {
+  width: var(--content-container-width);
   margin: auto;
-  width: $width-content-container-mobile;
-
-  @include breakpoint($desktop) {
-    width: $width-content-container-mobile;
-  }
 }
 
 section {
-  $navbar-height: 45px;
-  scroll-margin-top: $navbar-height;
+  scroll-margin-top: var(--navbar-height);
   padding: $space-base 0;
 }
 
@@ -62,33 +79,10 @@ section {
   }
 }
 
-@include breakpoint($tablet) {
-  .content-container {
-    width: $width-content-container-tablet;
-  }
-
-  section {
-    $navbar-height: 70px;
-    scroll-margin-top: $navbar-height;
-  }
-}
-
 @include breakpoint($desktop) {
-  .content-container {
-    width: $width-content-container-desktop;
-  }
-
   .btn--gradient {
     @include on-event {
       box-shadow: 0 10px 20px 0 $primary;
     }
   }
-}
-
-@include breakpoint($lg-desktop) {
-
-}
-
-@include breakpoint($xl-desktop) {
-
 }

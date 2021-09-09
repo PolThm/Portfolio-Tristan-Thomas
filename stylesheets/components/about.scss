@@ -25,7 +25,7 @@
 
   @include breakpoint($lg-desktop) {
     .content-container {
-      width: $width-container-tight;
+      width: $container-tight-width;
     }
   }
 }

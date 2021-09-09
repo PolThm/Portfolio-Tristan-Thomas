@@ -1,56 +1,54 @@
-#contact {
+.contact {
   margin-bottom: -$footer-height;
 
   h2 {
     text-align: center;
   }
 
-  .contact {
+  &__content {
+    margin: 0 auto 6rem auto;
+    padding-left: $space-xl;
+    border-left: 3px solid $primary;
+    @include flex-column;
+    gap: $space-base;
+
+    p {
+      font-weight: 400;
+    }
+
+    span {
+      color: initial;
+    }
+
+    a {
+      transition: color $time1 $easing;
+      text-decoration: underline;
+
+      @include on-event {
+        color: $primary;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+
+    i {
+      transition: color $time1 $easing;
+
+      @include on-event {
+        color: $primary;
+      }
+    }
+
+    &--github {
+      margin-left: $space-lg;
+    }
+  }
+
+  @include breakpoint($lg-desktop) {
     &__content {
-      margin: 0 auto 6rem auto;
-      padding-left: $space-xl;
-      border-left: 3px solid $primary;
-      @include flex-column;
-      gap: $space-base;
-
-      p {
-        font-weight: 400;
-      }
-
-      span {
-        color: initial;
-      }
-
-      a {
-        transition: color $time1 $easing;
-        text-decoration: underline;
-
-        @include on-event {
-          color: $primary;
-        }
-      }
-    }
-
-    &__links {
-      display: flex;
-
-      i {
-        transition: color $time1 $easing;
-
-        @include on-event {
-          color: $primary;
-        }
-      }
-
-      &--github {
-        margin-left: $space-lg;
-      }
-    }
-
-    @include breakpoint($lg-desktop) {
-      &__content {
-        width: $width-container-tight;
-      }
+      width: $container-tight-width;
     }
   }
 }

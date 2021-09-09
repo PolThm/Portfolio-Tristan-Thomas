@@ -1,19 +1,17 @@
 @import "navbar";
 
-$vh-header: 75vh;
-
 header {
-  min-height: $vh-header;
+  min-height: 100%;
   background: $light;
 
   .hero {
-    min-height: calc(#{$vh-header} - #{$navbar-height});
+    min-height: calc(75vh - #{var(--navbar-height)});
     @include flex-center-column;
     text-align: center;
-    padding: calc(#{$navbar-height} + #{$space-2xl}) 0 $space-xl 0;
+    padding: calc(#{var(--navbar-height)} + #{$space-2xl}) 0 $space-xl 0;
 
     img {
-      max-width: 210px;
+      max-width: 18rem;
       border-radius: $br-full;
       margin-top: -$space-base;
       margin-bottom: $space-base;
@@ -31,14 +29,7 @@ header {
 
   @include breakpoint($tablet) {
     .hero img {
-      max-width: 260px;
       margin-top: initial;
-    }
-  }
-
-  @include breakpoint($desktop) {
-    .hero img {
-      max-width: 300px;
     }
   }
 }
