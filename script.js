@@ -10,8 +10,8 @@ const toggleNav = () => {
     menu.classList.toggle('menu--active');
 }
 
-const openPdf = (pdf) => {
-    window.open(pdf);
+const openLink = (link) => {
+    window.open(link);
 }
 
 const goToAnchor = (anchor) => {
