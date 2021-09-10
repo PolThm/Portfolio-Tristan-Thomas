@@ -73,7 +73,7 @@
     }
 
     .btn {
-      margin-top: initial;
+      margin-top: unset;
     }
   }
 
@@ -91,10 +91,10 @@
     .menu {
       min-width: 30%;
       align-items: center;
-      width: initial;
-      position: initial;
-      background: initial;
-      flex-direction: initial;
+      width: unset;
+      position: unset;
+      background: unset;
+      flex-direction: unset;
 
       &__link {
         margin-left: 1.5rem;

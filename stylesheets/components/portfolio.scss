@@ -38,7 +38,7 @@
         color: $dark;
         background: $white;
         border-color: $white;
-        margin-top: initial;
+        margin-top: unset;
         @include transition(all);
 
         @include on-event {
