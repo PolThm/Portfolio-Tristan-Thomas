@@ -54,7 +54,7 @@
         color: $white;
         font-weight: 500;
         @include font-size($text-xs);
-        @include transition(color border);
+        @include transition(color);
       }
 
       @include on-event{
@@ -77,13 +77,13 @@
     }
   }
 
-  .burger {
+  .burger i {
     @include font-size($text-lg);
     cursor: pointer;
     @include transition(color, $time1);
 
     @include on-event {
-      color: $primary;
+      color: $primary !important;
     }
   }
 
@@ -102,7 +102,7 @@
         a {
           color: $dark;
           border-color: $dark;
-          @include transition(color border, $time1 $time1);
+          @include transition(color, $time1);
         }
 
         @include on-event {

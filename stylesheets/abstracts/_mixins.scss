@@ -188,7 +188,7 @@ $z-index-level: very-low, low, middle, high, very-high;
 
 /// Visibility
 @mixin fade($type) {
-  @include transition(visibility opacity, $time3);
+  @include transition(visibility opacity, $time3 $time3);
 
   @if $type== "hide" {
     visibility: hidden;
