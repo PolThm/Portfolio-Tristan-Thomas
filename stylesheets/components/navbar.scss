@@ -83,7 +83,7 @@
     @include transition(color, $time1);
 
     @include on-event {
-      color: $primary !important;
+      color: $primary;
     }
   }
 
