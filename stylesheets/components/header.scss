@@ -1,5 +1,21 @@
 @import "navbar";
 
+:root {
+  --image-size: 15rem;
+}
+
+@include breakpoint($tablet) {
+  :root {
+    --image-size: 16.5rem;
+  }
+}
+
+@include breakpoint($desktop) {
+  :root {
+    --image-size: 18rem;
+  }
+}
+
 header {
   min-height: 100%;
   background: $light;
@@ -11,7 +27,7 @@ header {
     padding: calc(#{var(--navbar-height)} + #{$space-2xl}) 0 $space-xl 0;
 
     img {
-      max-width: 18rem;
+      max-width: var(--image-size);
       border-radius: $br-full;
       margin-top: -$space-base;
       margin-bottom: $space-base;
