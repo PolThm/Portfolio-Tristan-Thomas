@@ -28,33 +28,21 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      @include flex-center-column;
-      gap: $space-base;
+      @include flex-center;
       @include fade('hide');
 
       .btn {
         width: 100%;
         text-align: center;
-        color: $dark;
-        background: $white;
+        color: $white;
         border-color: $white;
+        background: transparent;
         margin-top: unset;
         @include transition(all);
 
         @include on-event {
-          color: $white;
-          background: transparent;
-        }
-
-        &--outline {
-          color: $white;
-          border-color: $white;
-          background: transparent;
-
-          @include on-event {
-            color: $dark;
-            background: $white;
-          }
+          color: $dark;
+          background: $white;
         }
 
         i {
@@ -72,12 +60,6 @@
       .project__cta {
         @include fade('show');
       }
-    }
-  }
-
-  @include breakpoint($tablet) {
-    .project__cta {
-      gap: $space-lg !important;
     }
   }
 
