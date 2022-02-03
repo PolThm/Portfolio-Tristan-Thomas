@@ -1,1 +1,3 @@
-Portfolio Tristan Thomas - Data Analyst
+Portfolio Tristan Thomas - Data analyst
+
+https://www.tristanthomas.tk/
